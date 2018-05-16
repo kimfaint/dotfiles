@@ -11,6 +11,12 @@ dotfiledir=`pwd`
 dotfiles=`ls -a | grep '^\.' | grep -v '^\.*$' | grep -v '^\.git$'`
 
 for f in $dotfiles; do
+
+    # skip directories
+    if [ -d "$f" ]; then
+        continue
+    fi
+
     # if file exists, remove it
     if [ -e ~/$f ]; then
         rm -v -R ~/$f
