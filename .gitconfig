@@ -3,3 +3,6 @@
 	name = Kim Faint
 [core]
 	editor = vim
+[push]
+	# push all branches
+	default = matching
