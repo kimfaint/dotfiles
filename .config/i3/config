@@ -285,14 +285,14 @@ bindsym $mod+shift+d exec j4-dmenu-desktop --dmenu="dmenu -fn 'DroidSansMono:bol
 ################### ASSIGN ######################
 
 
-assign [class="Firefox"]          → 1
+#assign [class="Firefox"]          → 1
 assign [class="sublime-text"]     → 2
 assign [class="sublime_text"]     → 2
 assign [class="Sublime_text"]     → 2
 assign [class="Inkscape"]         → 3
 assign [class="Gimp"]             → 4
 assign [class="Vlc"]              → 7
-assign [class="Thunar"]             → 8
+#assign [class="Thunar"]             → 8
 assign [class="Thunderbird"]            → 9
 assign [class="Evolution"]        → 9
 assign [class="Spotify"]          → 10
@@ -308,7 +308,6 @@ exec_always --no-startup-id numlockx on
 exec --no-startup-id nm-applet
 exec variety
 exec pasystray
-exec blueberry-tray
 
 # NOTIFICATION
 exec dunst -config ~/.config/dunst/dunstrc
@@ -323,22 +322,7 @@ exec google-chrome
 #mod1 = ALT
 
 bindsym $mod+Shift+Return exec thunar; focus
-bindsym control+mod1+f exec firefox;workspace 1; focus
-bindsym $mod+F1 exec firefox;workspace 1;focus
-bindsym control+mod1+w exec subl;workspace 2;focus
-bindsym $mod+F2 exec subl;workspace 2;focus
-bindsym control+mod1+i exec inkscape;workspace 3;focus
-bindsym $mod+F3 exec inkscape;workspace 3;focus
-bindsym control+mod1+g exec gimp;workspace 4;focus
-bindsym $mod+F4 exec gimp;workspace 4;focus
-bindsym control+mod1+b exec thunar;workspace 8;focus
-bindsym $mod+F8 exec thunar;workspace 8;focus
-bindsym control+mod1+e exec evolution;workspace 9;focus
-bindsym $mod+F9 exec evolution;workspace 9;focus
-bindsym control+mod1+s exec spotify;workspace 10;focus
-bindsym $mod+F10 exec spotify;workspace 10;focus
-bindsym control+mod1+t exec terminator; focus
-bindsym control+mod1+n exec cinnamon-settings
+bindsym $mod+F1 exec google-chrome;focus
 
 
 ################### SHORTCUTS WORKSPACES ######################

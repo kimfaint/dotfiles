@@ -1,11 +1,11 @@
 conky.config = {
 	alignment = 'top_right',
-	background = true,
+	background = false,
 	color2 = 'fefefe',
 	cpu_avg_samples = 2,
 	default_color = 'FFFFFF',
 	double_buffer = true,
-	font = 'Noto Mono:size=12:bold',
+	font = 'Noto Mono:size=10:bold',
 	gap_x = 25,
 	gap_y = 25,
 	minimum_width = 300,
@@ -17,27 +17,28 @@ conky.config = {
 	use_xft = true,
 }
 conky.text = [[
-$alignr$color2${font Noto Mono:size=20:bold}${time %A}${font}
-$alignr${font Noto Mono:size=16}${time %e} ${time %b} ${time %Y}${font}
+$alignr${font Noto Mono:size=10}${time %A}, ${time %e} ${time %b} ${time %Y}${font}
 $hr
 #
-${voffset 5}${goto 20}${color}${font Noto Mono:size=15:bold}CPU$alignr$cpu%${font}
+${voffset 5}${goto 20}${color}${font Noto Mono:size=13:bold}CPU$alignr$cpu%${font}
+${voffset 0}${goto 20}${cpugraph 50,285 000000 ffffff}
 ${voffset 0}${goto 40}$color${font Noto Mono:size=13:bold}${top name 1}$alignr${color}${top cpu 1}%${font}
 ${goto 40}$color2${font Noto Mono:size=13}${top name 2}$alignr$color${top cpu 2}%${font}
-${goto 40}$color2${font Noto Mono:size=13}${top name 3}$alignr$color${top cpu 3}%${font}
-${goto 40}$color2${font Noto Mono:size=13}${top name 4}$alignr$color${top cpu 4}%${font}
-${goto 40}$color2${font Noto Mono:size=13}${top name 5}$alignr$color${top cpu 5}%${font}
+${goto 40}$color2${font Noto Mono:size=12}${top name 3}$alignr$color${top cpu 3}%${font}
+${goto 40}$color2${font Noto Mono:size=11}${top name 4}$alignr$color${top cpu 4}%${font}
+${goto 40}$color2${font Noto Mono:size=10}${top name 5}$alignr$color${top cpu 5}%${font}
 #
-${voffset 10}${goto 20}${color1}${font Noto Mono:size=15:bold}RAM$alignr$mem${font}
+${voffset 5}${goto 20}${color1}${font Noto Mono:size=13:bold}RAM$alignr$mem${font}
+${voffset 0}${goto 20}${memgraph 50,285 000000 ffffff}
 ${goto 40}${voffset 0}$color${font Noto Mono:size=13:bold}${top_mem name 1}$alignr$color${top_mem mem_res 1}${font}
 ${goto 40}$color2${font Noto Mono:size=13}${top_mem name 2}$alignr$color${top_mem mem_res 2}${font}
-${goto 40}$color2${font Noto Mono:size=13}${top_mem name 3}$alignr$color${top_mem mem_res 3}${font}
-${goto 40}$color2${font Noto Mono:size=13}${top_mem name 4}$alignr$color${top_mem mem_res 4}${font}
-${goto 40}$color2${font Noto Mono:size=13}${top_mem name 5}$alignr$color${top_mem mem_res 5}${font}
+${goto 40}$color2${font Noto Mono:size=12}${top_mem name 3}$alignr$color${top_mem mem_res 3}${font}
+${goto 40}$color2${font Noto Mono:size=11}${top_mem name 4}$alignr$color${top_mem mem_res 4}${font}
+${goto 40}$color2${font Noto Mono:size=10}${top_mem name 5}$alignr$color${top_mem mem_res 5}${font}
 #
 $hr
-#${color2}${alignr}${execi 1200 whoami}@${nodename}
-${color2}${font Noto Mono:size=12:bold}${alignr}kernel: ${color}${kernel}${font}
-${alignr}${color2}${font Noto Mono:size=12:bold}uptime: ${color}${uptime_short}${font}
-${voffset 0}$alignr$color${font Noto Mono:size=14:bold}${execi 5000 cat /etc/os-release | perl -n -e '/^NAME=\"([a-zA-Z ]*)\"$/ && print "$1\n"'}${font}
+${color2}${alignr}${execi 1200 whoami}@${nodename}
+${color2}${font Noto Mono:size=10:bold}${alignr}kernel: ${color}${kernel}${font}
+${alignr}${color2}${font Noto Mono:size=10:bold}uptime: ${color}${uptime_short}${font}
+${voffset 0}$alignr$color${font Noto Mono:size=12:bold}${execi 5000 cat /etc/os-release | grep PRETTY_NAME | sed 's/.*"\(.*\)"/\1/'}${font}
 ]]

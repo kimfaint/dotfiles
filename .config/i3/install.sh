@@ -31,12 +31,13 @@ sudo apt install -y unclutter
 
 echo --------------------
 echo Sound systray
-sudo apt install -y volti
-
-echo --------------------
-echo Alternate terminal
-sudo apt install -y terminator
+sudo apt install -y pasystray
 
 echo --------------------
 echo conky
 sudo apt install -y conky
+
+echo --------------------
+echo Notification
+sudo apt install -y dunst
+

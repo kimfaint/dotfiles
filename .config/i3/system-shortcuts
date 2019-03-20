@@ -1,12 +1,12 @@
 conky.config = {
 	alignment = 'bottom_right',
-	background = true,
+	background = false,
 	color1 = 'fefefe',
 	color2 = 'fefefe',
 	cpu_avg_samples = 2,
 	default_color = 'FFFFFF',
 	double_buffer = true,
-	font = 'Noto Mono:size=12:bold',
+	font = 'Noto Mono:size=10:bold',
 	gap_x = 25,
 	gap_y = 50,
 	minimum_width = 250,
@@ -37,6 +37,4 @@ ${color2}Gimp - ${color1}Ctrl+Alt+g
 ${color2}reload config file - ${color1}mod+Shift+r
 ${color2}System - ${color1}mod+Pause/Break
 ${color2}Exit i3 - ${color1}mod+Shift+e
-
-
 ]]
