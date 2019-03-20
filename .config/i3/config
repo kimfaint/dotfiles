@@ -356,6 +356,7 @@ bindsym Control+Print exec gnome-screenshot -i
 #floating enabled from some programs
 for_window [class="Gnome-disks"] floating enable
 for_window [class="^Skype$"] floating enable
+for_window [class="^Sky$"] floating enable
 for_window [class="^Gnome-font-viewer$"] floating enable
 #for_window [class="^Thunar$"] floating enable
 for_window [class="^Gpick$"] floating enable
