@@ -13,3 +13,5 @@ alias cdt='cd /opt/rapid/src/test'
 
 # iftop ignore broadcast packets
 alias iftop="sudo /usr/sbin/iftop -f 'not ether host ff:ff:ff:ff:ff:ff'"
+
+alias perli='do{print("perl> ");$_x=<>;chomp $_x;print(eval($_x)."\n")}while($_x ne "q")'
