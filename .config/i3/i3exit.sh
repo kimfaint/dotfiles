@@ -3,7 +3,12 @@
 lock() {
     #i3lock -c 222222
     #i3lock -i ~/.config/i3/lockscreen.png -t
-    dm-tool switch-to-greeter
+    #dm-tool switch-to-greeter
+    import -silent -window root /tmp/i3lock.png
+    convert /tmp/i3lock.png -interpolate nearest -virtual-pixel mirror -spread 5 /tmp/i3lock.png
+    convert /tmp/i3lock.png ~/.config/i3/i3lock-icon.png -gravity center -composite /tmp/i3lock.png
+    i3lock -i /tmp/i3lock.png
+    rm -f /tmp/i3lock.png
 }
 
 case "$1" in
