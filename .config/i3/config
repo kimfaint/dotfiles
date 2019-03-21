@@ -238,31 +238,23 @@ bindsym $mod+shift+d exec j4-dmenu-desktop --dmenu="dmenu -fn 'DroidSansMono:bol
 # setting variables for later use
 # use xrandr to know the names of your monitors
 # use this line to tell which monitor is on the right
-# xrandr --output DVI-I-2 --right-of DVI-I-1 --auto
+# xrandr --output DVI-I-0 --right-of DVI-I-1 --auto
 
 # my current setup
-#set $firstMonitor DVI-I-1
-#set $secondMonitor DVI-I-2
+set $firstMonitor DP-1
+set $secondMonitor DVI-1-0
+exec --no-startup-id xrandr --output $secondMonitor --right-of $firstMonitor --auto
 
-#set $firstMonitor DVI-I-2
-#set $secondMonitor VGA-0
-
-#set $firstMonitor DVI-I-2
-#set $secondMonitor DVI-I-3
-
-#set $firstMonitor DVI-0
-#set $secondMonitor DVI-1
-
-#workspace 1 output $firstMonitor
-#workspace 2 output $firstMonitor
-#workspace 3 output $firstMonitor
-#workspace 4 output $firstMonitor
-#workspace 5 output $firstMonitor
-#workspace 6 output $secondMonitor
-#workspace 7 output $secondMonitor
-#workspace 8 output $secondMonitor
-#workspace 9 output $secondMonitor
-#workspace 10 output $secondMonitor
+workspace 1 output $firstMonitor
+workspace 2 output $firstMonitor
+workspace 3 output $firstMonitor
+workspace 4 output $firstMonitor
+workspace 5 output $firstMonitor
+workspace 6 output $secondMonitor
+workspace 7 output $secondMonitor
+workspace 8 output $secondMonitor
+workspace 9 output $secondMonitor
+workspace 10 output $secondMonitor
 ################### MOUSE ######################
 
 
