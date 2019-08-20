@@ -5,6 +5,10 @@
 # this file and re-run i3-config-wizard(1).
 #
 
+gaps inner 4
+gaps outer 0
+smart_gaps on
+
 # i3 config file (v4)
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
@@ -129,6 +133,9 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
+# Automated tests using Chrome spawn in workspace 3 or as floating windows so they can resize
+#for_window [class="Google-chrome" instance="^google-chrome.+?tmp"] floating enable
+assign [class="Google-chrome" instance="^google-chrome.+?tmp"] 3
 
 ################### RESIZE ##############################
 
@@ -452,8 +459,8 @@ bindsym $mod+t border normal
 bindsym $mod+y border 1pixel
 bindsym $mod+u border none
 
-
-#new_window 1pixel
+# disable window title bars
+new_window 1pixel
 #new_float 1pixel
 
 
