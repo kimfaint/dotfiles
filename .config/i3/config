@@ -320,7 +320,7 @@ exec google-chrome
 ################### SHORTCUTS APPLICATIONS ######################
 #mod1 = ALT
 
-bindsym $mod+Shift+Return exec thunar; focus
+bindsym $mod+Shift+Return exec nemo; focus
 bindsym $mod+F1 exec google-chrome;focus
 
 

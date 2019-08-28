@@ -41,3 +41,6 @@ echo --------------------
 echo Notification
 sudo apt install -y dunst
 
+echo --------------------
+echo File Browser
+sudo apt install -y nemo
