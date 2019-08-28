@@ -233,11 +233,13 @@ bindsym $mod+Return exec gnome-terminal;focus
 bindsym $mod+d exec dmenu_run -fn 'NotoMonoRegular:bold:pixelsize=18' 
 
 # start alternative menu j4-dmenu based on desktop files in /usr/share/applications
-bindsym $mod+shift+d exec j4-dmenu-desktop --dmenu="dmenu -fn 'DroidSansMono:bold:pixelsize=16' -nb '#fdf6e3' -nf '#586c75' -sf '#fdf6e3' -sb '#FFAF00'"
+#bindsym $mod+shift+d exec j4-dmenu-desktop --dmenu="dmenu -fn 'DroidSansMono:bold:pixelsize=16' -nb '#fdf6e3' -nf '#586c75' -sf '#fdf6e3' -sb '#FFAF00'"
 
 # start up i3-dmenu-desktop
 #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
+# start rofi dmenu replacement
+bindsym $mod+shift+d exec rofi -show drun
 
 ################### DUAL SCREEN ######################
 

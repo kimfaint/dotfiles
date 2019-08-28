@@ -44,3 +44,7 @@ sudo apt install -y dunst
 echo --------------------
 echo File Browser
 sudo apt install -y nemo
+
+echo --------------------
+echo Rofi dmenu replacement
+sudo apt install -y rofi
