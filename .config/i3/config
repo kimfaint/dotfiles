@@ -346,9 +346,10 @@ for_window [urgent=latest] focus
 
 ################### SCREENSHOTS ######################
 
-
+# Capture whole screen
 bindsym Print exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/'
-bindsym Control+Print exec gnome-screenshot -i
+# Capture current window
+bindsym Control+Print exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -u -e 'mv $f ~/Pictures/'
 
 
 
