@@ -10,6 +10,7 @@ alias rm='rm -i'
 
 # Change directories
 alias cdt='cd /opt/rapid/src/test'
+alias cdw='cd ~/Work/Trapeze/rc/psp/test'
 
 # iftop ignore broadcast packets
 alias iftop="sudo /usr/sbin/iftop -f 'not ether host ff:ff:ff:ff:ff:ff'"
