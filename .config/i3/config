@@ -134,7 +134,8 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # Automated tests using Chrome spawn in workspace 3 or as floating windows so they can resize
-#for_window [class="Google-chrome" instance="^google-chrome.+?tmp"] floating enable
+for_window [class="Google-chrome" instance="^google-chrome.+?tmp"] floating enable
+for_window [class="Google-chrome" instance="^google-chrome.+?tmp"] move position 0 0
 assign [class="Google-chrome" instance="^google-chrome.+?tmp"] 3
 
 ################### RESIZE ##############################
@@ -428,7 +429,7 @@ mode "$mode_system" {
 
 bindcode 124 exec --no-startup-id ~/.config/i3/i3exit.sh suspend, mode "default"
 
-exec xautolock -detectsleep -time 5 -locker '~/.config/i3/i3exit.sh lock' -notify 30 -notifier "notify-send -u normal -t 10000 -- 'locking screen in 30 seconds'" &
+exec xautolock -detectsleep -time 30 -locker '~/.config/i3/i3exit.sh lock' -notify 30 -notifier "notify-send -u normal -t 10000 -- 'locking screen in 30 seconds'" &
 
 ################### AUDIO ######################
 
