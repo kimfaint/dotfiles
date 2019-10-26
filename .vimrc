@@ -49,6 +49,7 @@ Plug 'roxma/nvim-yarp', v:version >= 800 && !has('nvim') ? {} : { 'on': [], 'for
 Plug 'roxma/vim-hug-neovim-rpc', v:version >= 800 && !has('nvim') ? {} : { 'on': [], 'for': [] }
 Plug 'raghur/vim-ghost', {'do': ':GhostInstall'}
 Plug 'vim-python/python-syntax'
+Plug 'scrooloose/nerdtree'
 call plug#end()
 
 " enable extra string formatting syntax highlighting from above plugin
