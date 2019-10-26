@@ -9,7 +9,7 @@ alias mv='mv -i'
 alias rm='rm -i'
 
 # Change directories
-alias cdt='cd /opt/rapid/src/test'
+alias cdt='cd ~/rc/psp/test'
 alias cdw='cd ~/Work/Trapeze/rc/psp/test'
 
 # iftop ignore broadcast packets
