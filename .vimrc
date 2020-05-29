@@ -1,6 +1,9 @@
 syntax on
 set ruler
 
+set spelllang=en_au
+set spellfile=$HOME/.vim/spell/en.utf-8.add
+
 au FileType perl setl sw=4 ts=4
 au FileType python setl sw=4 sts=4 et
 au FileType c setl sw=4 sts=4 et
