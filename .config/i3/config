@@ -5,9 +5,9 @@
 # this file and re-run i3-config-wizard(1).
 #
 
-gaps inner 4
-gaps outer 0
-smart_gaps on
+#gaps inner 4
+#gaps outer 0
+#smart_gaps on
 
 # i3 config file (v4)
 #
@@ -423,7 +423,8 @@ bindsym $mod+Pause mode "$mode_system"
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
-    bindsym l exec --no-startup-id ~/.config/i3/i3exit.sh lock, mode "default"
+    #bindsym l exec --no-startup-id ~/.config/i3/i3exit.sh lock, mode "default"
+    bindsym l exec --no-startup-id ~/.config/i3/lock -n -p, mode "default"
     bindsym e exec --no-startup-id ~/.config/i3/i3exit.sh logout, mode "default"
     bindsym s exec --no-startup-id ~/.config/i3/i3exit.sh suspend, mode "default"
     bindsym h exec --no-startup-id ~/.config/i3/i3exit.sh hibernate, mode "default"
