@@ -36,3 +36,14 @@ for d in $dotdirs; do
     echo "linking $d"
     ln -v -sf $dotfiledir/$d ~/$d
 done
+
+echo "apt installing stuff I will probably use"
+sudo apt install -y tmux mercurial curl snapd git vim picocom python3-pip fonts-powerline net-tools xclip
+
+echo "apt installing perlbrew and dependencies"
+sudo apt install -y gcc patch bzip2 bzip2-libs perlbrew
+
+echo "apt installing i3 and dependencies"
+pushd .config/i3
+./install.sh
+popd
