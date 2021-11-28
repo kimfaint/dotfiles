@@ -259,7 +259,7 @@ bindsym $mod+shift+d exec rofi -show drun
 
 # my current setup
 set $firstMonitor DP-1
-set $secondMonitor DVI-1-0
+set $secondMonitor DP-2
 exec --no-startup-id xrandr --output $secondMonitor --right-of $firstMonitor --auto
 
 workspace 1 output $firstMonitor
