@@ -251,15 +251,9 @@ bindsym $mod+shift+d exec rofi -show drun
 
 ################### DUAL SCREEN ######################
 
-
-# setting variables for later use
-# use xrandr to know the names of your monitors
-# use this line to tell which monitor is on the right
-# xrandr --output DVI-I-0 --right-of DVI-I-1 --auto
-
 # my current setup
-set $firstMonitor DP-1
-set $secondMonitor DP-2
+set $firstMonitor DP-1 eDP-1
+set $secondMonitor DP-2 HDMI-2
 exec --no-startup-id xrandr --output $secondMonitor --right-of $firstMonitor --auto
 
 workspace 1 output $firstMonitor
