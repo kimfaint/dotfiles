@@ -38,7 +38,7 @@ for d in $dotdirs; do
 done
 
 echo "apt installing stuff I will probably use"
-sudo apt install -y tmux mercurial curl snapd git vim picocom python3-pip fonts-powerline net-tools xclip
+sudo apt install -y tmux mercurial curl snapd git vim picocom python3-pip fonts-powerline net-tools xclip kitty tig
 
 echo "apt installing perlbrew and dependencies"
 sudo apt install -y gcc patch bzip2 bzip2-libs perlbrew
