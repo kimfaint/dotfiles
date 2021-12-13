@@ -254,7 +254,7 @@ bindsym $mod+shift+d exec rofi -show drun
 # my current setup
 set $firstMonitor DP-1 eDP-1
 set $secondMonitor DP-2 HDMI-2
-exec --no-startup-id xrandr --output $secondMonitor --right-of $firstMonitor --auto
+exec ~/.config/i3/arrange-monitors.sh $firstMonitor $secondMonitor
 
 workspace 1 output $firstMonitor
 workspace 2 output $firstMonitor
