@@ -1,0 +1,5 @@
+require("my.plugin_config.tokyonight")
+require("my.plugin_config.lualine")
+require("my.plugin_config.nvim-tree")
+require("my.plugin_config.nvim-treesitter")
+require("my.plugin_config.telescope")
