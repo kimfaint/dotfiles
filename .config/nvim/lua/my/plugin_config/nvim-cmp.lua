@@ -25,6 +25,25 @@ require('lspconfig')['pylsp'].setup {
     },
 }
 
+local pythonpath = os.getenv("PYTHONPATH")
+local pythonexe = os.execute("which python")
+
+require('lspconfig')['robotframework_ls'].setup {
+    capabilities = capabilities,
+    settings = {
+        robot = {
+            pythonpath = {
+                pythonpath
+            },
+            python = {
+                -- executable = pythonexe
+                executable = "/home/kim/.local/share/virtualenvs/test-wccZTxFl/bin/python"
+            }
+        }
+    }
+}
+
+
 -- luasnip setup
 local luasnip = require 'luasnip'
 
