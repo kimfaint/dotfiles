@@ -47,6 +47,9 @@ require('lspconfig')['pylsp'].setup {
                 jedi_completion = {
                     include_params = true,
                 },
+		pycodestyle = {
+                    ignore = {'E501'}
+		}
             },
         },
     },
