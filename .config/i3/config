@@ -312,7 +312,6 @@ for_window [class="Spotify"] move to workspace 10
 # TRAY APPLICATIONS
 exec_always --no-startup-id numlockx on
 exec --no-startup-id nm-applet
-exec variety
 exec pasystray
 
 # NOTIFICATION
@@ -369,7 +368,6 @@ for_window [class="^Gpick$"] floating enable
 #for_window [class="^Spotify$"] floating enable workspace 10
 #for_window [instance="gimp"] floating enable
 for_window [window_role="^gimp-toolbox-color-dialog$"] floating enable
-for_window [instance="variety"] floating enable
 for_window [class="Gnome-system-monitor"] floating enable
 for_window [class="Brasero"] floating enable
 for_window [class="Xfburn"] floating enable
@@ -395,20 +393,6 @@ for_window [class="Hexchat"] floating disable
 
 #Popups during fullscreen mode
 popup_during_fullscreen smart
-
-
-################### VARIETY ######################
-
-
-#Variety keybindings
-# trash wallpaper
-bindsym mod1+t exec variety -t
-# next wallpaper
-bindsym mod1+n exec variety -n
-# previous wallpaper
-bindsym mod1+p exec variety -p
-# favorite wallpaper
-bindsym mod1+f exec variety -f
 
 
 ################### MODE_SYSTEM ######################

@@ -11,7 +11,7 @@ numlockx on
 
 echo --------------------
 echo Wallpapers
-sudo apt install -y feh variety
+sudo apt install -y feh
 
 echo --------------------
 echo Icons, themes, mouse
