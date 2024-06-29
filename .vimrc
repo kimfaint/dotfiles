@@ -47,15 +47,3 @@ let g:netrw_winsize = 25
 "  autocmd VimEnter * :Vexplore
 "augroup END
 
-" -------------- Plugins ----------------
-"  " https://github.com/junegunn/vim-plug
-call plug#begin('~/.vim/plugged')
-Plug 'vim-python/python-syntax'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'vim-airline/vim-airline'
-call plug#end()
-
-" enable extra string formatting syntax highlighting from above plugin
-let g:python_highlight_all = 1
-
