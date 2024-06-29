@@ -33,6 +33,13 @@ done
 
 echo "installing dotdirs"
 for d in $dotdirs; do
+
+    # remove anything that will hinder the creation of the dotdir link
+    if [ -e ~/$d ]; then
+        echo "remove ~/$d"
+        rm -v -R ~/$d
+    fi
+
     echo "linking $d"
     ln -v -sf $dotfiledir/$d ~/$d
 done
