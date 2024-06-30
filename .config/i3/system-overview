@@ -42,9 +42,9 @@ ${goto 40}$color2${font Noto Mono:size=12}${top_mem name 3}$alignr$color${top_me
 ${goto 40}$color2${font Noto Mono:size=11}${top_mem name 4}$alignr$color${top_mem mem_res 4}${font}
 ${goto 40}$color2${font Noto Mono:size=10}${top_mem name 5}$alignr$color${top_mem mem_res 5}${font}
 #
-${voffset 5}${goto 20}${color1}${font Noto Mono:size=13:bold}Network$alignr${downspeed enp0s31f6}/${upspeed enp0s31f6}${font}
-${voffset 0}${goto 20}${downspeedgraph enp0s31f6 30,285 000000 ffffff -t}
-${voffset 0}${goto 20}${upspeedgraph enp0s31f6 20,285 000000 ffffff -t}
+${voffset 5}${goto 20}${color1}${font Noto Mono:size=13:bold}Network$alignr${downspeed enp2s0}/${upspeed enp2s0}${font}
+${voffset 0}${goto 20}${downspeedgraph enp2s0 30,285 000000 ffffff -t}
+${voffset 0}${goto 20}${upspeedgraph enp2s0 20,285 000000 ffffff -t}
 #
 $hr
 ${color2}${alignr}${execi 1200 whoami}@${nodename}
