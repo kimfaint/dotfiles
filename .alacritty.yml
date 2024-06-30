@@ -3,16 +3,16 @@ window:
 
 font:
     normal:
-        family: "JetBrains Mono"
+        family: "JetBrainsMono NF"
         style: Regular
 
     bold:
-        family: "JetBrains Mono"
+        family: "JetBrainsMono NF"
         style: Bold
 
     italic:
-        family: "JetBrains Mono"
+        family: "JetBrainsMono NF"
         style: Italic
 
-    size: 10.0
+    size: 11.0
 

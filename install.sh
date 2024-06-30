@@ -45,7 +45,7 @@ for d in $dotdirs; do
 done
 
 echo "apt installing stuff I will probably use"
-sudo apt install -y tmux mercurial curl snapd git vim picocom python3-pip fonts-powerline fonts-jetbrains-mono net-tools xclip alacritty tig fzf fd-find ripgrep
+sudo apt install -y tmux mercurial curl snapd git vim picocom python3-pip net-tools xclip alacritty tig fzf fd-find ripgrep
 
 echo "apt installing perlbrew and dependencies"
 sudo apt install -y gcc patch bzip2 bzip2-libs perlbrew
@@ -53,4 +53,13 @@ sudo apt install -y gcc patch bzip2 bzip2-libs perlbrew
 echo "apt installing i3 and dependencies"
 pushd .config/i3
 ./install.sh
+popd
+
+echo "Install Nerd Fonts"
+mkdir ~/.fonts
+pushd ~/.fonts
+wget  https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip
+unzip JetBrainsMono.zip
+rm *.zip
+fc-cache -fv
 popd
