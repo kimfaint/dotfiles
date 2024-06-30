@@ -5,9 +5,9 @@
 # this file and re-run i3-config-wizard(1).
 #
 
-#gaps inner 4
-#gaps outer 0
-#smart_gaps on
+gaps inner 8
+gaps outer 0
+smart_gaps on
 
 # i3 config file (v4)
 #
