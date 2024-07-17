@@ -347,10 +347,21 @@ for_window [urgent=latest] focus
 
 ################### SCREENSHOTS ######################
 
-# Capture whole screen
-bindsym Print exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/'
-# Capture current window
-bindsym Control+Print exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -u -e 'mv $f ~/Pictures/'
+bindsym $mod+Shift+S mode "$mode_scrot"
+
+set $mode_scrot System (d) whole desktop, (u) focused window, (s) selection
+mode "$mode_scrot" {
+    # Capture whole screen
+    bindsym d exec scrot '/tmp/%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'xclip -selection clipboard -t image/png $f', mode "default"
+    # Capture current window
+    bindsym u exec scrot '/tmp/%Y-%m-%d-%s_screenshot_$wx$h.jpg' -u -e 'xclip -selection clipboard -t image/png $f', mode "default"
+    # Capture area and put on clipboard
+    bindsym --release s exec --no-startup-id scrot '/tmp/%Y-%m-%d-%s_screenshot_$wx$h.jpg' -s -e 'xclip -selection clipboard -t image/png $f', mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
 
 
 
@@ -400,7 +411,7 @@ popup_during_fullscreen smart
 
 bindsym $mod+x mode "$mode_system"
 
-set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (d) shutdown
 mode "$mode_system" {
     #bindsym l exec --no-startup-id ~/.config/i3/i3exit.sh lock, mode "default"
     bindsym l exec --no-startup-id ~/.config/i3/lock -n -p, mode "default"
@@ -408,7 +419,7 @@ mode "$mode_system" {
     bindsym s exec --no-startup-id ~/.config/i3/i3exit.sh suspend, mode "default"
     bindsym h exec --no-startup-id ~/.config/i3/i3exit.sh hibernate, mode "default"
     bindsym r exec --no-startup-id ~/.config/i3/i3exit.sh reboot, mode "default"
-    bindsym Shift+s exec --no-startup-id ~/.config/i3/i3exit.sh shutdown, mode "default"
+    bindsym d exec --no-startup-id ~/.config/i3/i3exit.sh shutdown, mode "default"
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"
