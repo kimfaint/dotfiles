@@ -10,7 +10,7 @@ dotfiledir=`pwd`
 # all files beginning with a dot but not . .. or .git
 dotfiles=`ls -a | grep '^\.' | grep -v '^\.*$' | grep -v '^\.git$'`
 
-dotdirs=".config/dunst .config/i3 .config/onedrive .config/nvim"
+dotdirs=".config/dunst .config/i3 .config/onedrive .config/nvim .config/kitty"
 
 echo "installing dotfiles..."
 for f in $dotfiles; do
@@ -45,7 +45,7 @@ for d in $dotdirs; do
 done
 
 echo "apt installing stuff I will probably use"
-sudo apt install -y tmux mercurial curl snapd git vim picocom python3-pip net-tools xclip alacritty tig fzf fd-find ripgrep
+sudo apt install -y tmux mercurial curl snapd git vim picocom python3-pip net-tools xclip alacritty kitty tig fzf fd-find ripgrep
 
 echo "apt installing perlbrew and dependencies"
 sudo apt install -y gcc patch bzip2 bzip2-libs perlbrew
