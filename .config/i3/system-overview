@@ -32,9 +32,8 @@ ${goto 40}$color2${font Noto Mono:size=10}${top name 5}$alignr$color${top cpu 5}
 ${voffset 5}${goto 20}${color1}${font Noto Mono:size=13:bold}Load$alignr$loadavg${font} 
 ${voffset 0}${goto 20}${loadgraph 50,285 000000 ffffff -t}
 #
-${voffset 5}${goto 20}${color1}${font Noto Mono:size=13:bold}RAM$alignr$mem${font} 
-$alignr free $memfree
-$alignr easyfree $memeasyfree
+${voffset 5}${goto 20}${color1}${font Noto Mono:size=13:bold}RAM (real)$alignr${execi 5 free -m | awk 'NR==2{printf "%.1fG/%.1fG", ($3-$6)/1024, $2/1024}'}${font}
+$alignr cache ${memeasyfree}
 ${voffset 0}${goto 20}${memgraph 50,285 000000 ffffff -t}
 ${goto 40}${voffset 0}$color${font Noto Mono:size=13:bold}${top_mem name 1}$alignr$color${top_mem mem_res 1}${font}
 ${goto 40}$color2${font Noto Mono:size=13}${top_mem name 2}$alignr$color${top_mem mem_res 2}${font}
@@ -42,9 +41,9 @@ ${goto 40}$color2${font Noto Mono:size=12}${top_mem name 3}$alignr$color${top_me
 ${goto 40}$color2${font Noto Mono:size=11}${top_mem name 4}$alignr$color${top_mem mem_res 4}${font}
 ${goto 40}$color2${font Noto Mono:size=10}${top_mem name 5}$alignr$color${top_mem mem_res 5}${font}
 #
-${voffset 5}${goto 20}${color1}${font Noto Mono:size=13:bold}Network$alignr${downspeed enp2s0}/${upspeed enp2s0}${font}
-${voffset 0}${goto 20}${downspeedgraph enp2s0 30,285 000000 ffffff -t}
-${voffset 0}${goto 20}${upspeedgraph enp2s0 20,285 000000 ffffff -t}
+${voffset 5}${goto 20}${color1}${font Noto Mono:size=13:bold}Network$alignr${downspeed eth0}/${upspeed eth0}${font}
+${voffset 0}${goto 20}${downspeedgraph eth0 30,285 000000 ffffff -t}
+${voffset 0}${goto 20}${upspeedgraph eth0 20,285 000000 ffffff -t}
 #
 $hr
 ${color2}${alignr}${execi 1200 whoami}@${nodename}

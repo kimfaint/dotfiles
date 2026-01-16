@@ -39,6 +39,11 @@ floating_modifier $mod
 # kill focused window
 bindsym $mod+Shift+q kill
 
+exec --no-startup-id ~/.fehbg
+
+exec --no-startup-id dex --autostart --environment i3
+
+
 # start dmenu (a program launcher)
 #bindsym $mod+d exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
@@ -311,8 +316,9 @@ for_window [class="Spotify"] move to workspace 10
 
 # TRAY APPLICATIONS
 exec_always --no-startup-id numlockx on
-exec --no-startup-id nm-applet
-exec pasystray
+#exec --no-startup-id nm-applet
+#exec --no-startup-id nm-tray
+#exec pasystray
 
 # NOTIFICATION
 exec dunst -config ~/.config/dunst/dunstrc
@@ -501,13 +507,13 @@ bar {
 #	# type status_command i3status without the config file and 
     # you will get the standard i3status bar
     # this is the standard statusbar with my personal settings
-	status_command i3status -c ~/.config/i3/i3status.conf
+#	status_command i3status -c ~/.config/i3/i3status.conf
 
     # https://github.com/vivien/i3blocks
     # another way to provide text in the statusbar
     # step 10 of https://github.com/erikdubois/i3-on-Linux-Mint-18-Cinnamon/tree/master/installation
     # put hastag in front if not installed
-    # status_command i3blocks -c ~/.config/i3/i3blocks.conf
+    status_command i3blocks -c ~/.config/i3/i3blocks.conf
 
     # You can also replace the istatus bar with a conky
     # be sure to install conky
