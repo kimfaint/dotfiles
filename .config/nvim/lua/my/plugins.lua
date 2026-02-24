@@ -54,6 +54,7 @@ return require('packer').startup(function(use)
   use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
   use 'L3MON4D3/LuaSnip' -- Snippets plugin
   use 'williamboman/mason.nvim' -- manage LSP and DAP servers, linters and formatters
+  use 'mfussenegger/nvim-dap' -- Debug Adapter Protocol
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

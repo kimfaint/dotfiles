@@ -62,7 +62,7 @@ local format = output:gsub('[\n\r]', '')
 local pythonexe = format
 print("pythonexe:", pythonexe)
 
-require('lspconfig')['robotframework_ls'].setup {
+require('lspconfig')['robotcode'].setup {
     on_attach = my_on_attach,
     capabilities = capabilities,
     settings = {
@@ -76,7 +76,6 @@ require('lspconfig')['robotframework_ls'].setup {
         }
     }
 }
-
 
 -- luasnip setup
 local luasnip = require 'luasnip'
