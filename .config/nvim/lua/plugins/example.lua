@@ -1,4 +1,4 @@
--- since this is just an example spec, don't actually load anything here and return an empty spec
+-- this is an example file, modify it to your liking
 -- stylua: ignore
 if true then return {} end
 
@@ -191,6 +191,7 @@ return {
         "shellcheck",
         "shfmt",
         "flake8",
+        "robotcode",
       },
     },
   },
