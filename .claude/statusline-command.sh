@@ -39,19 +39,26 @@ fi
 # Short directory: ~ for home, basename otherwise
 dir="${cwd/#$HOME/\~}"
 
-# Hg branch (cached 5s to avoid slowdowns)
-cache="/tmp/statusline-hg-cache"
+# VCS branch (cached 5s to avoid slowdowns)
+cache="/tmp/statusline-vcs-cache"
 now=$(date +%s)
 mtime=$(stat -c %Y "$cache" 2>/dev/null || echo 0)
-hg_status_cache="/tmp/statusline-hg-status-cache"
+vcs_status_cache="/tmp/statusline-vcs-status-cache"
 if (( now - mtime > 5 )); then
   branch=$(hg branch -R "$cwd" 2>/dev/null)
+  if [[ -n "$branch" ]]; then
+    vcs_dirty=$(hg status -R "$cwd" 2>/dev/null | head -1)
+  else
+    branch=$(git -C "$cwd" branch --show-current 2>/dev/null)
+    if [[ -n "$branch" ]]; then
+      vcs_dirty=$(git -C "$cwd" status --porcelain 2>/dev/null | head -1)
+    fi
+  fi
   echo "$branch" > "$cache"
-  hg_dirty=$(hg status -R "$cwd" 2>/dev/null | head -1)
-  echo "$hg_dirty" > "$hg_status_cache"
+  echo "$vcs_dirty" > "$vcs_status_cache"
 else
   branch=$(cat "$cache")
-  hg_dirty=$(cat "$hg_status_cache")
+  vcs_dirty=$(cat "$vcs_status_cache")
 fi
 
 # Context bar: 10 chars
@@ -73,7 +80,7 @@ reset="\033[0m"
 # Branch display
 # Branch + dirty indicator
 if [[ -n "$branch" ]]; then
-  if [[ -n "$hg_dirty" ]]; then
+  if [[ -n "$vcs_dirty" ]]; then
     dirty_dot=" \033[33m\u25CF$reset"
   else
     dirty_dot=" \033[32m\u25CF$reset"
