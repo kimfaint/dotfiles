@@ -14,6 +14,7 @@ dotdirs=".config/dunst .config/i3 .config/onedrive .config/nvim .config/kitty"
 
 # Claude Code - symlink individual files (not the whole dir, Claude manages the rest)
 claudefiles="settings.json statusline-command.sh"
+claudedirs="plugins/local"
 
 echo "installing dotfiles..."
 for f in $dotfiles; do
@@ -56,6 +57,15 @@ for f in $claudefiles; do
     fi
     echo "linking .claude/$f"
     ln -v -sf $dotfiledir/.claude/$f ~/.claude/$f
+done
+for d in $claudedirs; do
+    if [ -e ~/.claude/$d ]; then
+        echo "remove ~/.claude/$d"
+        rm -v -R ~/.claude/$d
+    fi
+    mkdir -p "$(dirname ~/.claude/$d)"
+    echo "linking .claude/$d"
+    ln -v -sf $dotfiledir/.claude/$d ~/.claude/$d
 done
 
 echo "apt installing stuff I will probably use"

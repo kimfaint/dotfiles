@@ -1,13 +1,25 @@
 {
+  "permissions": {
+    "additionalDirectories": [
+      "/home/kim/.claude"
+    ]
+  },
   "model": "opus[1m]",
   "statusLine": {
     "type": "command",
     "command": "bash ~/.claude/statusline-command.sh"
   },
-  "effortLevel": "high",
-  "permissions": {
-    "additionalDirectories": [
-      "/home/kim/.claude"
-    ]
-  }
+  "enabledPlugins": {
+    "pyright-lsp@claude-plugins-official": true,
+    "robotcode-lsp@local-plugins": true
+  },
+  "extraKnownMarketplaces": {
+    "local-plugins": {
+      "source": {
+        "source": "directory",
+        "path": "/home/kim/.claude/plugins/local"
+      }
+    }
+  },
+  "effortLevel": "high"
 }

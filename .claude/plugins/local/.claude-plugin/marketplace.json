@@ -1,0 +1,31 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "local-plugins",
+  "description": "Locally maintained Claude Code plugins",
+  "owner": {
+    "name": "Kim"
+  },
+  "plugins": [
+    {
+      "name": "robotcode-lsp",
+      "description": "Robot Framework language server for code intelligence",
+      "version": "1.0.0",
+      "author": {
+        "name": "Kim"
+      },
+      "source": "./robotcode-lsp",
+      "category": "development",
+      "strict": false,
+      "lspServers": {
+        "robotcode": {
+          "command": "robotcode",
+          "args": ["language-server", "--stdio"],
+          "extensionToLanguage": {
+            ".robot": "robotframework",
+            ".resource": "robotframework"
+          }
+        }
+      }
+    }
+  ]
+}

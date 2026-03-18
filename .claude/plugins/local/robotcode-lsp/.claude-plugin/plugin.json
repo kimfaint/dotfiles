@@ -1,0 +1,18 @@
+{
+  "name": "robotcode-lsp",
+  "description": "Robot Framework language server for code intelligence",
+  "version": "1.0.0",
+  "author": {
+    "name": "Kim"
+  },
+  "lspServers": {
+    "robotcode": {
+      "command": "robotcode",
+      "args": ["language-server", "--stdio"],
+      "extensionToLanguage": {
+        ".robot": "robotframework",
+        ".resource": "robotframework"
+      }
+    }
+  }
+}
