@@ -12,6 +12,9 @@ dotfiles=`ls -a | grep '^\.' | grep -v '^\.*$' | grep -v '^\.git$'`
 
 dotdirs=".config/dunst .config/i3 .config/onedrive .config/nvim .config/kitty"
 
+# Claude Code - symlink individual files (not the whole dir, Claude manages the rest)
+claudefiles="settings.json statusline-command.sh"
+
 echo "installing dotfiles..."
 for f in $dotfiles; do
 
@@ -42,6 +45,17 @@ for d in $dotdirs; do
 
     echo "linking $d"
     ln -v -sf $dotfiledir/$d ~/$d
+done
+
+echo "installing claude code config"
+mkdir -p ~/.claude
+for f in $claudefiles; do
+    if [ -e ~/.claude/$f ]; then
+        echo "remove ~/.claude/$f"
+        rm -v ~/.claude/$f
+    fi
+    echo "linking .claude/$f"
+    ln -v -sf $dotfiledir/.claude/$f ~/.claude/$f
 done
 
 echo "apt installing stuff I will probably use"
