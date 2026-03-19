@@ -2,7 +2,15 @@ return {
   "neovim/nvim-lspconfig",
   opts = {
     servers = {
-      pyright = {},
+      pyright = {
+        settings = {
+          python = {
+            analysis = {
+              typeCheckingMode = "basic",
+            },
+          },
+        },
+      },
     },
   },
 }
