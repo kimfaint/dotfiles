@@ -19,3 +19,14 @@ alias perli='do{print("perl> ");$_x=<>;chomp $_x;print(eval($_x)."\n")}while($_x
 
 # Memory usage (real pressure excluding disk cache)
 alias memreal='free -m | awk '\''NR==2{printf "Real usage: %.1fG / %.1fG (%.0f%%)\n", ($3-$6)/1024, $2/1024, (($3-$6)/$2)*100}'\'
+
+# Claude YoLo
+alias claudeadsp="claude --allow-dangerously-skip-permissions"
+alias claudedsp="claude --dangerously-skip-permissions"
+
+# CLI Quick Search/AI
+alias '?'='f() { w3m "https://duckduckgo.com/?q=$(echo "$*" | sed "s/ /+/g")"; }; f'
+alias '??'='f() { claude -p "$*"; }; f'
+
+# Timewarrior
+alias t="timew"
