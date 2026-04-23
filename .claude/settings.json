@@ -2,7 +2,8 @@
   "permissions": {
     "additionalDirectories": [
       "/home/kim/.claude"
-    ]
+    ],
+    "defaultMode": "auto"
   },
   "model": "opus[1m]",
   "statusLine": {
@@ -21,5 +22,26 @@
       }
     }
   },
-  "effortLevel": "high"
+  "spinnerVerbs": {
+    "mode": "replace",
+    "verbs": [
+      "Boiling the ocean",
+      "Yak shaving",
+      "Eating the bear",
+      "Sometimes the bear eats you",
+      "He's going the distance... He's going for speed",
+      "All your bAI belong to us",
+      "The truth is out there",
+      "Spinning plates",
+      "Flying high",
+      "Pulling strings",
+      "Counting our chickens",
+      "Getting ahead of ourselves",
+      "Get to the choppa!",
+      "Skynet booting"
+    ]
+  },
+  "effortLevel": "high",
+  "skipDangerousModePermissionPrompt": true,
+  "skipAutoPermissionPrompt": true
 }

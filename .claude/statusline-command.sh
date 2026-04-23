@@ -90,4 +90,4 @@ else
   branch_str=""
 fi
 
-printf "\033[1m%s${reset} \033[1;34m%s${reset}${branch_str} ${color}\u25C9 ${bar} %d%%${reset} \u23F1 %s \u2022 %s \u2022 \u2B06${cache_pct}%%" "$model" "$dir" "$pct" "$dur_fmt" "$tokens_fmt"
+printf "\033[1m%s${reset} \033[1;34m%s${reset}${branch_str} ${color}\u25C9 ${bar} %d%%${reset} \U000f0954 %s \u2022 %s \u2022 \u2B06${cache_pct}%%" "$model" "$dir" "$pct" "$dur_fmt" "$tokens_fmt"
