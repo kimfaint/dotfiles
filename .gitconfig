@@ -6,3 +6,9 @@
 [push]
 	# push all branches
 	default = matching
+[credential]
+	helper = store
+[includeIf "gitdir:~/rc/"]
+	path = ~/.gitconfig-work
+[includeIf "gitdir:~/github/"]
+	path = ~/.gitconfig-github
