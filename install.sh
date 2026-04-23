@@ -10,7 +10,7 @@ dotfiledir=`pwd`
 # all files beginning with a dot but not . .. or .git
 dotfiles=`ls -a | grep '^\.' | grep -v '^\.*$' | grep -v '^\.git$'`
 
-dotdirs=".config/dunst .config/i3 .config/onedrive .config/nvim .config/kitty"
+dotdirs=".config/dunst .config/i3 .config/onedrive .config/nvim .config/kitty .config/gtk-3.0 .config/gtk-4.0"
 
 # Claude Code - symlink individual files (not the whole dir, Claude manages the rest)
 claudefiles="settings.json statusline-command.sh"
