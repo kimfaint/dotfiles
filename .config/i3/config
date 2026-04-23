@@ -407,6 +407,10 @@ for_window [class="Usb-creator-gtk"] floating enable
 for_window [class="MintUpdate.py"] floating enable
 #for_window [class="Bleachbit"] floating enable
 for_window [class="Hexchat"] floating disable
+for_window [class="MPlayer"] floating enable, resize set width 0 px height 0 px
+for_window [class="Playwright"] floating enable
+for_window [class="playwright"] floating enable
+for_window [class="MiniBrowser"] floating enable
 
 #Popups during fullscreen mode
 popup_during_fullscreen smart
