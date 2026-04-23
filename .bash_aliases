@@ -30,3 +30,10 @@ alias '??'='f() { claude -p "$*"; }; f'
 
 # Timewarrior
 alias t="timew"
+
+# Incus
+alias ils="incus ls -c ns4 -f compact"
+
+# Kitty
+alias kitcat="kitten icat"
+alias bat="batcat"
