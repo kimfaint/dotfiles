@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --no-fehbg --bg-scale '/home/kim/Wallpapers/death_valley.png'
+feh -Z --no-fehbg --bg-fill '/home/kim/Wallpapers/debian.png'
